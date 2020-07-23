@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon server/index.js",
-    "start": "node server/index.js",
+    "dev": "next",
+    "start": "next start",
     "build": "next build"
   },
   "husky": {

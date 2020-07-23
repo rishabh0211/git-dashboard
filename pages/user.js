@@ -74,7 +74,7 @@ const User = props => {
   };
 
   const getProfileSummaryData = () => {
-    fetch(`/api/profile-summary/${username}`)
+    fetch(`/api/profile-summary?username=${username}`)
       .then(res => res.json())
       .then(data => {
         setProfileSummaryData(data);

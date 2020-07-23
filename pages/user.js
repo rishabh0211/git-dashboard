@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import PropTypes from 'prop-types';
 import GhPolyglot from 'gh-polyglot';
 import Head from '../components/Head';
 import UserInfo from '../components/UserInfo';
 import Charts from '../components/Charts';
 import RepoInfo from '../components/RepoInfo';
 import styled from "styled-components";
-import { mockLangData, mockProfileSummaryData, mockRateLimit, mockRepoData, mockUserData } from "../utils";
+// import { mockLangData, mockProfileSummaryData, mockRateLimit, mockRepoData, mockUserData } from "../utils";
 
 const StyledUser = styled.div`
   background: #ebeff2;
@@ -20,14 +19,14 @@ const User = props => {
   const [langData, setLangData] = useState(null);
   
   useEffect(() => {
-    // getLangData();
-    // getRepoData();
-    // getUserDetails();
-    // getProfileSummaryData();
-    setUserData(mockUserData);
-    setLangData(mockLangData);
-    setProfileSummaryData(mockProfileSummaryData);
-    setRepoData(mockRepoData);
+    getLangData();
+    getRepoData();
+    getUserDetails();
+    getProfileSummaryData();
+    // setUserData(mockUserData);
+    // setLangData(mockLangData);
+    // setProfileSummaryData(mockProfileSummaryData);
+    // setRepoData(mockRepoData);
   }, []);
 
   const getRateLimit = () => {

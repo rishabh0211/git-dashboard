@@ -65,37 +65,40 @@ const RepoInfo = ({ repoData }) => {
           </StyledDropdown>
         </div>
       </header>
-      <FlipMove typeName="ul" className="repo-list">
-        {topRepos.map(repo => (
-          <li key={repo.id}>
-            <a className="repo__card" href={repo.html_url} target="_blank">
-              <div className="repo__card-top">
-                <h2>{repo.name}</h2>
-                <div className="repo__card-date">Created: {new Date(repo.created_at).toLocaleDateString('en-US', {
-                  month: 'long',
-                  day: 'numeric',
-                  year: 'numeric'
-                })}</div>
-                <p>{repo.description}</p>
-              </div>
-              <div className="repo__card-bottom">
-                <span>
-                  <div className="repo__lang-color" style={{ background: langColors[repo.language] ? langColors[repo.language].color : 'transparent' }}></div>
-                  {repo.language}
-                </span>
-                <span>
-                  <StarIcon className="icon" />
-                  {repo.stargazers_count}
-                </span>
-                <span>
-                  <RepoForkedIcon className="icon" />
-                  {repo.forks_count}
-                </span>
-              </div>
-            </a>
-          </li>
-        ))}
-      </FlipMove>
+      {!!repoData.length &&
+        <FlipMove typeName="ul" className="repo-list">
+          {topRepos.map(repo => (
+            <li key={repo.id}>
+              <a className="repo__card" href={repo.html_url} target="_blank">
+                <div className="repo__card-top">
+                  <h2>{repo.name}</h2>
+                  <div className="repo__card-date">Created: {new Date(repo.created_at).toLocaleDateString('en-US', {
+                    month: 'long',
+                    day: 'numeric',
+                    year: 'numeric'
+                  })}</div>
+                  <p>{repo.description}</p>
+                </div>
+                <div className="repo__card-bottom">
+                  <span>
+                    <div className="repo__lang-color" style={{ background: langColors[repo.language] ? langColors[repo.language].color : 'transparent' }}></div>
+                    {repo.language}
+                  </span>
+                  <span>
+                    <StarIcon className="icon" />
+                    {repo.stargazers_count}
+                  </span>
+                  <span>
+                    <RepoForkedIcon className="icon" />
+                    {repo.forks_count}
+                  </span>
+                </div>
+              </a>
+            </li>
+          ))}
+        </FlipMove>
+      }
+      {!repoData.length && <h1>You don't have any respositories!</h1>}
     </StyledRepoInfo>
   )
 }

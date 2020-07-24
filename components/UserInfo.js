@@ -3,13 +3,15 @@ import { LocationIcon, CalendarIcon } from "@primer/octicons-react";
 
 const UserInfo = ({ userData }) => {
   const { name, followers, following, created_at, location, login, avatar_url, public_repos } = userData;
+
+  const imageSrc = avatar_url || `../static/images/default.png`;
   return (
     <StyledUserInfo>
       <div className="user">
         <div className="user__row">
           <div className="user__image">
             <a href={`https://github.com/${login}`} target="_blank">
-              <img src={avatar_url} />
+              <img src={imageSrc} />
             </a>
           </div>
           <div className="user__info">

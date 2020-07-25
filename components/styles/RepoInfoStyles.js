@@ -9,12 +9,14 @@ export default styled.div `
 
   ${media.bp1024`
     padding: 2rem;
+    padding-bottom: 10rem;
   `}
   ${media.bp760`
     padding: 10rem;
   `}
   ${media.bp560`
     padding: 1rem;
+    padding-bottom: 10rem;
   `}
 
   header {
@@ -79,11 +81,15 @@ export default styled.div `
       }
       .repo__card-bottom {
         display: flex;
+        margin-top: 1.4rem;
+
+        .repo__card-left {
+          flex-grow: 1;
+        }
         span {
-          display: flex;
+          display: inline;
           margin-right: 1rem;
           align-items: center;
-          margin-top: 1.4rem;
         }
         .icon {
           margin-right: 0.5rem;

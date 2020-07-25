@@ -80,18 +80,23 @@ const RepoInfo = ({ repoData }) => {
                   <p>{repo.description}</p>
                 </div>
                 <div className="repo__card-bottom">
-                  <span>
-                    <div className="repo__lang-color" style={{ background: langColors[repo.language] ? langColors[repo.language].color : 'transparent' }}></div>
-                    {repo.language}
-                  </span>
-                  <span>
-                    <StarIcon className="icon" />
-                    {repo.stargazers_count}
-                  </span>
-                  <span>
-                    <RepoForkedIcon className="icon" />
-                    {repo.forks_count}
-                  </span>
+                  <div className="repo__card-left">
+                    <span>
+                      <div className="repo__lang-color" style={{ background: langColors[repo.language] ? langColors[repo.language].color : 'transparent' }}></div>
+                      {repo.language}
+                    </span>
+                    <span>
+                      <StarIcon className="icon" />
+                      {repo.stargazers_count}
+                    </span>
+                    <span>
+                      <RepoForkedIcon className="icon" />
+                      {repo.forks_count}
+                    </span>
+                  </div>
+                  <div className="repo__card-right">
+                    <span>{repo.size.toLocaleString()} KB</span>
+                  </div>
                 </div>
               </a>
             </li>

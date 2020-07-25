@@ -7,8 +7,10 @@ import Charts from '../components/Charts';
 import RepoInfo from '../components/RepoInfo';
 import styled from "styled-components";
 import Loader from '../components/Loader';
+import { fetch_retry } from "../utils";
 // import { mockLangData, mockProfileSummaryData, mockRateLimit, mockRepoData, mockUserData } from "../utils";
 import { theme } from "../styles/index";
+import Footer from '../components/Footer';
 const { colors, fonts } = theme;
 
 const StyledUser = styled.div`
@@ -126,7 +128,8 @@ const User = props => {
   };
 
   const getProfileSummaryData = () => {
-    fetch(`/api/profile-summary?username=${username}`)
+    const url = `/api/profile-summary?username=${username}`;
+    fetch_retry(url, {}, 2)
       .then(res => res.json())
       .then(data => {
         setProfileSummaryData(data);
@@ -173,6 +176,7 @@ const User = props => {
                 </div>
               }
               {repoData && <RepoInfo repoData={repoData} />}
+              <Footer />
             </>
           )
       }

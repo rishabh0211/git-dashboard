@@ -4,6 +4,7 @@ import mockLangData from './mockLangData';
 import mockRateLimit from './mockRateLimit';
 import mockProfileSummaryData from './mockProfileSummaryData';
 import langColors from './langColors';
+import { fetch_retry } from "./api";
 // import buildChart from './buildChart';
 
 const backgroundColor = [
@@ -32,5 +33,6 @@ export {
   backgroundColor,
   borderColor,
   mockProfileSummaryData,
+  fetch_retry
   // buildChart,
 };

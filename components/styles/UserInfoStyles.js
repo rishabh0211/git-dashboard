@@ -6,6 +6,9 @@ export default styled.section `
   background-image: linear-gradient(to right, #6565657a, #6b6b6b9e), url(../static/images/hero.jpg);
   background-size: contain;
   padding: 4rem;
+  ${media.bp560`
+    padding: 2rem;
+  `}
 
   .user__row {
     color: #fff;
@@ -28,9 +31,17 @@ export default styled.section `
       }
     `}
 
+    .user__image {
+      width: 20rem;
+      align-self: stretch;
+      border: solid .5rem #fff;
+      ${media.bp560`
+        border-bottom: none;
+      `}
+    }
+
     img {
       width: 20rem;
-      border: solid 1rem #fff;
     }
     .user__info {
       font-size: 2rem;
@@ -38,7 +49,7 @@ export default styled.section `
       font-weight: 500s;
       flex-grow: 1;
       background: linear-gradient(to right bottom, black, #0e0c0c75);
-      border: solid 1rem;
+      border: solid .5rem;
       border-left: none;
       padding: 1rem;
 

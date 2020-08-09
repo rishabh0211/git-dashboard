@@ -14,7 +14,7 @@ const StyledModalContainer = styled.div`
   background: linear-gradient(#006d77 0%, #2b3f54 100%);
 
   form {
-    width: 27rem;
+    width: 32rem;
     background: ${colors.aqua};
     display: flex;
     flex-direction: column;
@@ -90,7 +90,7 @@ const Index = (props) => {
             ref={inputEl}
             name="userId"
             type="text"
-            placeholder="Enter your username"
+            placeholder="Enter your github username"
             onChange={handleChange}
           />
           <button type="submit">Submit</button>

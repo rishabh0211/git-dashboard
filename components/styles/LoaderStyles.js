@@ -6,7 +6,7 @@ const animate = keyframes`
   }
 
   100% {
-    transform: translateX(30px);
+    transform: translateX(3rem);
   }
 `;
 
@@ -15,25 +15,25 @@ const jump = keyframes`
     transform: translate(0, 0);
   }
   10% {
-    transform: translate(10px, -10px);
+    transform: translate(1rem, -1rem);
   }
   20% {
-    transform: translate(20px, 10px);
+    transform: translate(2rem, 1rem);
   }
   30% {
-    transform: translate(30px, -50px);
+    transform: translate(3rem, -5rem);
   }
   70% {
-    transform: translate(-150px, -50px);
+    transform: translate(-15rem, -5rem);
   }
   80% {
-    transform: translate(-140px, 10px);
+    transform: translate(-14rem, 1rem);
   }
   90% {
-    transform: translate(-130px, -10px);
+    transform: translate(-13rem, -1rem);
   }
   100% {
-    transform: translate(-120px, 0);
+    transform: translate(-12rem, 0);
   }
 `;
 
@@ -43,16 +43,16 @@ export default styled.div`
   position: relative;
   display: flex;
   background: white;
-  padding: 150px;
+  padding: 15rem;
 
   span {
     display: block;
-    width: 20px;
-    height: 20px;
+    width: 2rem;
+    height: 2rem;
     background: #eee;
     border-radius: 50%;
-    margin: 0 5px;
-    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+    margin: 0 .5rem;
+    box-shadow: 0 .2rem .2rem rgba(0, 0, 0, 0.2);
   }
 
   span:nth-child(2) {

@@ -21,7 +21,7 @@ const Footer = () => {
   return (
     <StyledFooter>
       Designed & Built with <span style={{color: '#0c9a9a'}}>&hearts;</span> by <a href="https://www.linkedin.com/in/rishabh-rastogi-955868103/" target="_blank">Rishabh Rastogi</a>.
-      &copy; 2020
+      &copy; {new Date().getFullYear()}
     </StyledFooter>
   )
 }

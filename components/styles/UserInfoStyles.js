@@ -26,7 +26,7 @@ export default styled.section `
         flex-direction: column;
         align-items: center;
         .user__info {
-          border-left: solid 1rem;
+          border-left: solid .5rem;
         }
       }
     `}
@@ -37,6 +37,7 @@ export default styled.section `
       border: solid .5rem #fff;
       ${media.bp560`
         border-bottom: none;
+        align-self: center;
       `}
     }
 

@@ -28,7 +28,7 @@
     "chart.js": "^2.9.3",
     "express": "^4.17.1",
     "gh-polyglot": "^2.3.2",
-    "next": "^9.4.4",
+    "next": "^11.1.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-flip-move": "^3.0.4",
